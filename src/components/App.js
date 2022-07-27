@@ -1,4 +1,6 @@
-import logo from '../images/logo.svg';
+import logoHeader from '../images/logo-awesome-profile-cards.png';
+import logoFooter from '../images/logo-adalab.png';
+
 import '../styles/App.scss';
 
 function App() {
@@ -7,7 +9,7 @@ function App() {
       <header>
         <img
           className="header__img"
-          src="./assets/images/logo-awesome-profile-cards.png"
+          src= {logoHeader}
           alt="imagen logo"
           title="logo"
         />
@@ -260,7 +262,7 @@ function App() {
       <footer className="footer">
         <p className="footer-title">Awesome profile-cards &copy2022</p>
         <img
-          src="./assets/images/logo-adalab.png"
+          src={logoFooter}
           alt="logo Adalab"
           title="logo Adalab"
           className="adalab-img"
