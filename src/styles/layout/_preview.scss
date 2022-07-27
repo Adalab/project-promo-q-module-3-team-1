@@ -1,0 +1,103 @@
+.card{
+    background: linear-gradient(to bottom, #bfcdd0, #dde9ed);
+    height: 457px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+
+    &__section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__container{
+        background-color: $color-text-button;
+        width: 240px;
+        height: 329px;
+        border-bottom: 40px;
+
+        &--name{
+            font-size: 18px;
+            font-family: $montserrat;
+            //color:$color-title;
+            font-weight: bold;
+            padding-left: 20px;
+            margin-top: 21px;
+            margin-bottom: 10px;}
+
+        & --paragraph{
+            font-size: 16px;
+            font-family: $montserrat-bold;
+            //color:$color-letter;
+            padding-left: 20px;
+            margin-bottom: 10px;   
+        }
+
+        &--verticalBorder{
+            border-left: 5px solid ;//$color-button-index;
+        }
+
+        &--image{
+            background:
+              url(../../images/image-react.png) center no-repeat;
+            background-size: contain;
+            width: 240px;
+            height: 200px;     
+        }
+
+        &--list{
+            display: flex;
+            gap:20px;
+            padding-left: 20px;
+            margin-top: 15px;
+           
+        }
+    }
+
+    &__rrss{
+        border: 2px solid; //$color-circle; 
+        border-radius: 50%;
+        width: 25px;
+        height: 22px;
+        color:$color-title;
+        text-align: center;
+        padding: 5px 3px 3px 3px;
+    }
+}
+
+
+
+.reset{ 
+    padding: 5px;
+
+    &__container{
+        border: 1px solid $color-text-button;
+        border-radius: 15px;
+        width: 75px;
+        background-color: $color-reset;
+        text-decoration: none;
+        margin-bottom: 20px;
+        margin-top: 34px;
+    }
+
+    &__button{
+        border: none;
+        background-color: transparent;
+        font-size:12px;
+        font-family: $open;
+        text-transform: uppercase;
+        color: $color-letter;
+        cursor: pointer;
+    }    
+ }
+
+ .list__elements{  
+    color:$color-title;
+    font-size: 18px;
+    width: 22px;
+    height: 22px;
+ }
+

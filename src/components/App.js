@@ -34,7 +34,7 @@ function App() {
                 </div>
                 <div
                   className="card__container--image js-imgPreview js__profile-preview"
-                  style= { {backgroundImage: "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTil9_c3PpcUTAx2vmHH6srdREmI1X8474m3Q&usqp=CAU')", backgroundSize: "cover"}}
+                  // style= { {backgroundImage: "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTil9_c3PpcUTAx2vmHH6srdREmI1X8474m3Q&usqp=CAU')", backgroundSize: "cover"}}
                 ></div>
                 <nav>
                   <ul className="card__container--list">
@@ -260,7 +260,7 @@ function App() {
       </main>
 
       <footer className="footer">
-        <p className="footer-title">Awesome profile-cards &copy2022</p>
+        <p className="footer-title">Awesome profile-cards &#169;2022</p>
         <img
           src={logoFooter}
           alt="logo Adalab"

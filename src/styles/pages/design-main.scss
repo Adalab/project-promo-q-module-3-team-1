@@ -1,109 +1,17 @@
 
 
-.card{
-    background: linear-gradient(to bottom, #bfcdd0, #dde9ed);
-    height: 457px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 20px;
-
-}
-.card__section{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.reset__container{
-    border: 1px solid $color-text-button;
-    border-radius: 15px;
-    width: 75px;
-    background-color: $color-reset;
-    text-decoration: none;
-    margin-bottom: 20px;
-    margin-top: 34px;
-
-}
-.reset{ 
-   
-   padding: 5px;
-    
-}
-.reset__button{
-    border: none;
-    background-color: transparent;
-    font-size:12px;
-    font-family: $open;
-    text-transform: uppercase;
-    color: $color-letter;
-    cursor: pointer;
-}
-
-.card__container--name{
-    font-size: 18px;
-    font-family: $montserrat;
-    //color:$color-title;
-    font-weight: bold;
-    padding-left: 20px;
-    margin-top: 21px;
-    margin-bottom: 10px;
-      
-   
-}
-.card__container--paragraph{
-    font-size: 16px;
-    font-family: $montserrat-bold;
-    //color:$color-letter;
-    padding-left: 20px;
-    margin-bottom: 10px;
-   
-}
-.card__container{
-    background-color: $color-text-button;
-    width: 240px;
-    height: 329px;
-    border-bottom: 40px;
-}
 
 
-.card__container--verticalBorder{
-    border-left: 5px solid ;//$color-button-index;
 
-}
-.card__container--image{
-    //background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTil9_c3PpcUTAx2vmHH6srdREmI1X8474m3Q&usqp=CAU");
-    background-size: cover;
-    width: 240px;
-    height: 200px;  
-   
-}
 
-.card__container--list{
-    display: flex;
-    gap:20px;
-    padding-left: 20px;
-    margin-top: 15px;
-   
-}
-.list__elements{  
-   color:$color-title;
-   font-size: 18px;
-   width: 22px;
-   height: 22px;
+
+
+
+
    
 
  
-}
-.card__rrss{
-    border: 2px solid; //$color-circle; 
-    border-radius: 50%;
-    width: 25px;
-    height: 22px;
-    color:$color-title;
-    text-align: center;
-    padding: 5px 3px 3px 3px;
-}
+
 
 //parte de nerea
 
@@ -435,15 +343,11 @@ cursor: pointer;}
 
     .section__preview{
         background: linear-gradient(to bottom, #bfcdd0, #dde9ed);
-        width: 40%;
-
+        width: 70%;
         margin:23px 40px 23px 0px;
         border-radius: 6px;
     }
 
-    .form-section{
-        width: 60%;
-    }
 
     .card{
         height: 100vh;
