@@ -3,7 +3,31 @@ import logoFooter from '../images/logo-adalab.png';
 
 import '../styles/App.scss';
 
+import {useState} from 'react';
+
 function App() {
+
+  const [dataCard, setDataCard] = useState({
+    palette: "1",
+    name: "",
+    job: "",
+    email: "",
+    phone: "",
+    linkedin: "",
+    github: "",
+  });
+
+  const handleInput = (event) => {
+    const inputValue = event.target.value;
+    const inputName = event.target.name;
+
+    setDataCard({
+      ...dataCard,
+      [inputName]: inputValue
+    })
+  }
+
+
   return (
     <>
       <header>
@@ -23,13 +47,13 @@ function App() {
                   <i className="reset fa-solid fa-trash-can"></i>Reset
                 </button>
               </div>
-              <div className="card__container palette1 js-card__container">
+              <div className={`card__container palette${dataCard.palette} js-card__container`}>
                 <div className="card__container--verticalBorder">
                   <h2 className="card__container--name js-namePreview">
-                    Nombre Apellido
+                    {dataCard.name||`Nombre y Apellidos`}
                   </h2>
                   <p className="card__container--paragraph js-positionPreview">
-                    Front-end developer
+                  {dataCard.job||`Front-end developer`}
                   </p>
                 </div>
                 <div
@@ -39,22 +63,22 @@ function App() {
                 <nav>
                   <ul className="card__container--list">
                     <li className="list__elements ">
-                      <a target="_blank" href="" className="js_link_phone">
+                      <a target="_blank" href= {`tel:${dataCard.phone}`} className="js_link_phone">
                         <i className="card__rrss fa-solid fa-mobile-screen-button js-iconPreview"></i>
                       </a>
                     </li>
                     <li className="list__elements">
-                      <a target="_blank" href="" className="js_link_email">
+                      <a target="_blank" href={`mailto:${dataCard.email}`} className="js_link_email">
                         <i className="fa-solid fa-envelope card__rrss js-iconPreview"></i>
                       </a>
                     </li>
                     <li className="list__elements">
-                      <a target="_blank" href="" className="js_link_linkedin">
+                      <a target="_blank" href={dataCard.linkedin} className="js_link_linkedin">
                         <i className="card__rrss fa-brands fa-linkedin-in js-iconPreview"></i>
                       </a>
                     </li>
                     <li className="list__elements">
-                      <a target="_blank" href="" className="js_link_github">
+                      <a target="_blank" href={dataCard.github} className="js_link_github">
                         <i className="card__rrss fa-brands fa-github-alt js-iconPreview"></i>
                       </a>
                     </li>
@@ -86,8 +110,9 @@ function App() {
                       id="colors1"
                       type="radio"
                       value="1"
-                      name="colors"
-                      checked
+                      name="palette"
+                      checked={dataCard.palette === "1"}
+                      onChange={handleInput}
                     />
                     <div className="first">
                       <div className="rectangle1-a"></div>
@@ -102,7 +127,9 @@ function App() {
                       id="colors2"
                       type="radio"
                       value="2"
-                      name="colors"
+                      name="palette"
+                      checked={dataCard.palette === "2"}
+                      onChange={handleInput}
                     />
                     <div className="second">
                       <div className="rectangle2-a"></div>
@@ -117,7 +144,9 @@ function App() {
                       id="colors3"
                       type="radio"
                       value="3"
-                      name="colors"
+                      name="palette"
+                      checked={dataCard.palette === "3"}
+                      onChange={handleInput}
                     />
                     <div className="third">
                       <div className="rectangle3-a"></div>
@@ -139,7 +168,7 @@ function App() {
                   <i className="fa-solid fa-angle-up js_arrowFill"></i>
                 </legend>
               </section>
-              <section className="fillform js-sectionFill hidden">
+              <section className="fillform js-sectionFill">
                 <label className="fillform__label" htmlFor="name">
                   Nombre Completo
                 </label>
@@ -149,6 +178,8 @@ function App() {
                   id="name"
                   type="text"
                   name="name"
+                  value={dataCard.name}
+                  onChange={handleInput}
                 />
                 <label className="fillform__label" htmlFor="job">
                   Puesto
@@ -159,6 +190,8 @@ function App() {
                   id="job"
                   type="text"
                   name="job"
+                  value={dataCard.job}
+                  onChange={handleInput}
                 />
                 <label className="fillform__label" htmlFor="profile_image">
                   Imagen de perfil
@@ -187,6 +220,8 @@ function App() {
                   type="email"
                   id="email"
                   name="email"
+                  value={dataCard.email}
+                  onChange={handleInput}
                 />
                 <label className="fillform__label" htmlFor="phone">
                   Teléfono
@@ -197,6 +232,8 @@ function App() {
                   type="tel"
                   id="phone"
                   name="phone"
+                  value={dataCard.phone}
+                  onChange={handleInput}
                 />
                 <label className="fillform__label" htmlFor="linkedin">
                   LinkedIn
@@ -206,6 +243,8 @@ function App() {
                   placeholder="Ej: linkedin.com/in/sally.hill"
                   type="text"
                   name="linkedin"
+                  value={dataCard.linkedin}
+                  onChange={handleInput}
                 />
                 <label className="fillform__label" htmlFor="github">
                   Github
@@ -215,6 +254,8 @@ function App() {
                   placeholder="Ej: @sally-hill"
                   type="text"
                   name="github"
+                  value={dataCard.github}
+                  onChange={handleInput}
                 />
               </section>
             </fieldset>
@@ -228,13 +269,13 @@ function App() {
                   </span>
                   <i className="share-arrow fa-solid fa-angle-up js_arrowShare"></i>
                 </legend>
-                <div className="buttondiv js__content_shareOne hidden">
+                <div className="buttondiv js__content_shareOne">
                   <button className="buttondiv-share js-btnShare">
                     <i className="share-card fa-solid fa-address-card"></i>{' '}
                     Crear tarjeta
                   </button>
                 </div>
-                <div className="buttontwitter js__content-shareTwo hidden">
+                <div className="buttontwitter js__content-shareTwo">
                   <h6 className="buttontwitter-h6 js-messageCard">
                     La tarjeta ha sido creada:
                   </h6>
