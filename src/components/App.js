@@ -20,11 +20,23 @@ function App() {
   const handleInput = (event) => {
     const inputValue = event.target.value;
     const inputName = event.target.name;
-
     setDataCard({
       ...dataCard,
       [inputName]: inputValue
     })
+  }
+
+  const handleReset = (event) => {
+    event.preventDefault();
+    setDataCard ({
+    palette: "1",
+    name: "",
+    job: "",
+    email: "",
+    phone: "",
+    linkedin: "",
+    github: "",
+  })
   }
 
 
@@ -43,7 +55,7 @@ function App() {
           <article className="card">
             <div className="card__section">
               <div className="reset__container">
-                <button className="reset__button js-btnPreview">
+                <button className="reset__button js-btnPreview" onClick={handleReset}>
                   <i className="reset fa-solid fa-trash-can"></i>Reset
                 </button>
               </div>
