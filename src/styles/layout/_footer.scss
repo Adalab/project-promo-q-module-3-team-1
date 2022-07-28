@@ -4,7 +4,7 @@ footer{
     align-items: center;
     justify-content: center;
     padding: 20px;
-    border-top: 1px solid $color-letter-t;
+    border-top: 1px solid $milton-glassy;
 
     @media all and (min-width: 768px) {
         flex-direction: row;
@@ -16,5 +16,5 @@ footer{
     width: 103px;
     margin: 12px 47px 0 48px;
 }
-.footer-title{ color:$color-footer}
+.footer-title{ color:$brownish-grey}
 

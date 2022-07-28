@@ -1,13 +1,13 @@
 .icon-index-main{
-    color: $icon-main;
+    color: $dull-orange;
     margin: 0;
     transform: scale(1.5);
     margin-bottom: 5px;
 }
 
 .main{
-    border-bottom: 1px solid $color-letter-t;
-    background-color: $color-bckg;
+    border-bottom: 1px solid $milton-glassy;
+    background-color: $white-four;
     height: 75vh;
     display: flex;
     flex-direction: column;
@@ -31,7 +31,7 @@
     &__section--wrapper{
         display: flex;
         flex-direction: row;
-        border: 1.6px solid $icon-main-t;
+        border: 1.6px solid $dull-orange-t;
         border-radius: 3.5%;
     }
 
@@ -46,7 +46,7 @@
 
     &__section--title{
         font-size: $size-big;
-        color: $icon-main;
+        color: $dull-orange;
         font-family: $merriwheather;
         font-weight: 900;
         line-height: normal;
@@ -54,7 +54,7 @@
     }
 
     &__icon--paragraph{
-        color: $color-letter;
+        color: $gunmetal;
         font-size: $size-small;
         font-family: $open;
         text-align: center;
@@ -72,7 +72,7 @@
     &__link--link{
      
         text-decoration: none;
-        color: $color-text-button;
+        color: $white-six;
         font-family: $open;
         font-size: $size-button;
         text-transform: uppercase;
