@@ -22,7 +22,7 @@
         &--name{
             font-size: 18px;
             font-family: $montserrat;
-            //color:$color-title;
+            //color:$dark-green-blue;
             font-weight: bold;
             padding-left: 20px;
             margin-top: 21px;
@@ -37,7 +37,7 @@
         }
 
         &--verticalBorder{
-            border-left: 5px solid ;//$color-button-index;
+            border-left: 5px solid ;//$dirty-blue;
         }
 
         &--image{
@@ -58,11 +58,11 @@
     }
 
     &__rrss{
-        border: 2px solid; //$color-circle; 
+        border: 2px solid; //$hospital-green; 
         border-radius: 50%;
         width: 25px;
         height: 22px;
-        color:$color-title;
+        color:$dark-green-blue;
         text-align: center;
         padding: 5px 3px 3px 3px;
     }
@@ -95,7 +95,7 @@
  }
 
  .list__elements{  
-    color:$color-title;
+    color:$dark-green-blue;
     font-size: 18px;
     width: 22px;
     height: 22px;

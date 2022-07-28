@@ -37,7 +37,7 @@
 
     &__section--paragraph{
         font-size: $size-small;
-        color: $color-title;
+        color: ;
         font-family: $open;
         line-height: normal;
         text-align: center;
@@ -77,7 +77,7 @@
         font-size: $size-button;
         text-transform: uppercase;
         padding: 8% 16%;
-        background-color: $color-button-index;
+        background-color: $dirty-blue;
         border-radius: 20px;
         /*la forma no queda exacta*/
     }

@@ -16,62 +16,21 @@
 //parte de nerea
 
 //form-section es la columna central
-.form-section{
-    box-sizing: content-box;
-    width: 100%;
-}
 
-.design-form{
-    width:100%;
-
-}
-
-.design-radio{
-    cursor: pointer;
-}
-
-.options {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-    margin-right: 20px;
-}
-
-.color {
-    text-transform: uppercase;
-    font-size: 14px;
-    padding-left: 39px;
-    color: $color-letter;
-    font-family: $open;
-    margin-top:10px;
-}
-.election {
-    
-    display: flex;
-    flex-direction: column;
-    
-}
-.first,
-.second,
-.third {
-    display: flex;
-    margin: 10px;
-}
 .rectangle1-a {
     width: 30px;
     height: 25px;
-    background-color: $color-title;
+    background-color: $dark-green-blue;
 }
 .rectangle1-b {
     width: 30px;
     height: 25px;
-    background-color: $color-button-index;
+    background-color: $dirty-blue;
 }
 .rectangle1-c {
     width: 30px;
     height: 25px;
-    background-color: $color-circle;
+    background-color: $hospital-green;
 }
 .rectangle2-a {
     width: 30px;
@@ -148,13 +107,13 @@
     &__label{
         width:100%;
         margin-top: 10px;
-        color: $color-title;
+        color: $dark-green-blue;
 
     }
 
     &__input{
         margin: 7px 0px 20px 0px;
-        border: 1px solid $color-circle;
+        border: 1px solid $hospital-green;
         height: 30px;
     }
 
@@ -178,7 +137,7 @@
         &--square{
            width: 30px;
            height: 30px;
-           border: 1px solid $color-circle;
+           border: 1px solid $hospital-green;
            background-size: cover;
            
         }
@@ -297,7 +256,7 @@ cursor: pointer;}
     &-button{
         text-decoration: none;
         text-align: center;
-        background-color: $color-button-twitter;
+        background-color: $azure;
         color: $color-text-button;
         border: none;
         border-radius: 5px;
@@ -373,14 +332,14 @@ cursor: pointer;}
 
 .card__container.palette1 {
     .card__container--name {
-        color: $color-title;
+        color: $dark-green-blue;
     }
     .card__container--verticalBorder {
-        border-color: $color-button-index;
+        border-color: $dirty-blue;
     }
     .card__rrss {
-        color: $color-title;
-        border-color: $color-circle;
+        color: $dark-green-blue;
+        border-color: $hospital-green;
     }
 }
 

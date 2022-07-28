@@ -75,22 +75,22 @@ function App() {
                 <nav>
                   <ul className="card__container--list">
                     <li className="list__elements ">
-                      <a target="_blank" href= {`tel:${dataCard.phone}`} className="js_link_phone">
+                      <a target="blank" href= {`tel:${dataCard.phone}`} className="js_link_phone">
                         <i className="card__rrss fa-solid fa-mobile-screen-button js-iconPreview"></i>
                       </a>
                     </li>
                     <li className="list__elements">
-                      <a target="_blank" href={`mailto:${dataCard.email}`} className="js_link_email">
+                      <a target="blank" href={`mailto:${dataCard.email}`} className="js_link_email">
                         <i className="fa-solid fa-envelope card__rrss js-iconPreview"></i>
                       </a>
                     </li>
                     <li className="list__elements">
-                      <a target="_blank" href={dataCard.linkedin} className="js_link_linkedin">
+                      <a target="blank" href={dataCard.linkedin} className="js_link_linkedin">
                         <i className="card__rrss fa-brands fa-linkedin-in js-iconPreview"></i>
                       </a>
                     </li>
                     <li className="list__elements">
-                      <a target="_blank" href={dataCard.github} className="js_link_github">
+                      <a target="blank" href={dataCard.github} className="js_link_github">
                         <i className="card__rrss fa-brands fa-github-alt js-iconPreview"></i>
                       </a>
                     </li>
@@ -126,10 +126,10 @@ function App() {
                       checked={dataCard.palette === "1"}
                       onChange={handleInput}
                     />
-                    <div className="first">
-                      <div className="rectangle1-a"></div>
-                      <div className="rectangle1-b"></div>
-                      <div className="rectangle1-c"></div>
+                    <div className="palette-rectangle">
+                      <div className="rectangle color1"></div>
+                      <div className="rectangle color2"></div>
+                      <div className="rectangle color3"></div>
                     </div>
                   </label>
 
@@ -143,10 +143,10 @@ function App() {
                       checked={dataCard.palette === "2"}
                       onChange={handleInput}
                     />
-                    <div className="second">
-                      <div className="rectangle2-a"></div>
-                      <div className="rectangle2-b"></div>
-                      <div className="rectangle2-c"></div>
+                    <div className="palette-rectangle">
+                      <div className="rectangle color4"></div>
+                      <div className="rectangle color5"></div>
+                      <div className="rectangle color6"></div>
                     </div>
                   </label>
 
@@ -160,10 +160,10 @@ function App() {
                       checked={dataCard.palette === "3"}
                       onChange={handleInput}
                     />
-                    <div className="third">
-                      <div className="rectangle3-a"></div>
-                      <div className="rectangle3-b"></div>
-                      <div className="rectangle3-c"></div>
+                    <div className="palette-rectangle">
+                      <div className="rectangle color7"></div>
+                      <div className="rectangle color8"></div>
+                      <div className="rectangle color9"></div>
                     </div>
                   </label>
                 </div>
