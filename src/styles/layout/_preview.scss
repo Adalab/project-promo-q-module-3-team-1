@@ -121,27 +121,27 @@
 
 .card__container.palette2 {
     .card__container--name {
-        color: #420101;
+        color: $dried-blood;
     }
     .card__container--verticalBorder {
-        border-color: #BD1010;
+        border-color: $rusty-red:;
     }
     .card__rrss {
-        color:#420101;
-        border-color: #E95626;
+        color:$dried-blood;
+        border-color: $tomato;
     }
 }
 
 .card__container.palette3 {
     .card__container--name {
-        color: #3E5B65;
+        color: $slate;
     }
     .card__container--verticalBorder {
-        border-color: #EAB052;
+        border-color: $faded-orange;
     }
     .card__rrss {
-        color:#3E5B65;
-        border-color: #A0C0CF;
+        color:$slate;
+        border-color: $light-grey-blue;
     }
 }
 
