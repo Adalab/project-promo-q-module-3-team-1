@@ -1,11 +1,11 @@
-.fa-angle-up{
-    padding-top: 16px;
-    position: absolute;
-    right: 10px;
+.fa-angle-up {
+  padding-top: 16px;
+  position: absolute;
+  right: 10px;
 
-    @media all and (min-width: 768px){
-     right: 45%;
-    }
+  @media all and (min-width: 768px) {
+    right: 45%;
+  }
 }
 
 // .share-arrow{
@@ -13,26 +13,26 @@
 //     cursor: pointer;
 // }
 
-.line{
-    border-top: 1px solid $white-two;
+.line {
+  border-top: 1px solid $white-two;
 }
 
-@media all and (min-width: 768px){
-    .main__forflex{
-        display: flex;
-        flex-direction: row-reverse;
-        background-color: $white-four;
-    }
+@media all and (min-width: 768px) {
+  .main__forflex {
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: $white-four;
+  }
 
-    .section__preview{
-        background: linear-gradient(to bottom, #$silver, #dde9ed);
-        width: 70%;
-        margin:23px 40px 23px 0px;
-        border-radius: 6px;
-    }
+  .section__preview {
+    background-color: linear-gradient($silver, $pale-grey);
+    width: 70%;
+    margin: 23px 40px 23px 0px;
+    border-radius: 6px;
+  }
 }
 
-.arrow-translate{
-    transform: rotate(180deg);
-    padding-bottom: 10px;
+.arrow-translate {
+  transform: rotate(180deg);
+  padding-bottom: 10px;
 } /*clase para que rote la flecha (toggle)*/
