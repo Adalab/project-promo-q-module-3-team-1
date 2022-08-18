@@ -1,103 +1,123 @@
-.card{
-    background: linear-gradient(to bottom, #bfcdd0, #dde9ed);
-    height: 457px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 20px;
+.card {
+  background: linear-gradient($silver, $pale-grey);
+  height: 457px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+  gap: 30px;
+  &__container {
+    background-color: $white-six;
+    width: 240px;
+    height: 329px;
+    border-bottom: 40px;
 
-    &__section{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+    &--name {
+      font-size: 18px;
+      font-family: $montserrat;
+      font-weight: bold;
+      padding-left: 20px;
+      margin-top: 21px;
+      margin-bottom: 10px;
     }
 
-    &__container{
-        background-color: $color-text-button;
-        width: 240px;
-        height: 329px;
-        border-bottom: 40px;
-
-        &--name{
-            font-size: 18px;
-            font-family: $montserrat;
-            //color:$dark-green-blue;
-            font-weight: bold;
-            padding-left: 20px;
-            margin-top: 21px;
-            margin-bottom: 10px;}
-
-        & --paragraph{
-            font-size: 16px;
-            font-family: $montserrat-bold;
-            //color:$color-letter;
-            padding-left: 20px;
-            margin-bottom: 10px;   
-        }
-
-        &--verticalBorder{
-            border-left: 5px solid ;//$dirty-blue;
-        }
-
-        &--image{
-            background:
-              url(../../images/image-react.png) center no-repeat;
-            background-size: contain;
-            width: 240px;
-            height: 200px;     
-        }
-
-        &--list{
-            display: flex;
-            gap:20px;
-            padding-left: 20px;
-            margin-top: 15px;
-           
-        }
+    & --paragraph {
+      font-size: 16px;
+      font-family: $montserrat-bold;
+      padding-left: 20px;
+      margin-bottom: 10px;
     }
 
-    &__rrss{
-        border: 2px solid; //$hospital-green; 
-        border-radius: 50%;
-        width: 25px;
-        height: 22px;
-        color:$dark-green-blue;
-        text-align: center;
-        padding: 5px 3px 3px 3px;
+    &--verticalBorder {
+      border-left: 5px solid; //$dirty-blue;
     }
+
+    &--image {
+      background: url(../../images/image-react.png) center no-repeat;
+      background-size: contain;
+      width: 240px;
+      height: 200px;
+    }
+
+    &--list {
+      display: flex;
+      gap: 20px;
+      padding-left: 20px;
+      margin-top: 15px;
+    }
+  }
+
+  &__rrss {
+    border: 2px solid; //$hospital-green;
+    border-radius: 50%;
+    width: 25px;
+    height: 22px;
+    color: $dark-green-blue;
+    text-align: center;
+    padding: 5px 3px 3px 3px;
+  }
+
+  @media all and (min-width: 768px) {
+    height: 100%;
+  }
 }
 
+.resetButton {
+  border: 1px solid $white-six;
+  border-radius: 15px;
+  background-color: transparent;
+  font-size: 12px;
+  font-family: $open;
+  text-transform: uppercase;
+  color: $gunmetal;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin-left: -170px;
+}
 
+.list__elements {
+  color: $dark-green-blue;
+  font-size: 18px;
+  width: 22px;
+  height: 22px;
+}
 
-.reset{ 
-    padding: 5px;
+.card__container.palette1 {
+  .card__container--name {
+    color: $dark-green-blue;
+  }
+  .card__container--verticalBorder {
+    border-color: $dirty-blue;
+  }
+  .card__rrss {
+    color: $dark-green-blue;
+    border-color: $hospital-green;
+  }
+}
 
-    &__container{
-        border: 1px solid $color-text-button;
-        border-radius: 15px;
-        width: 75px;
-        background-color: $color-reset;
-        text-decoration: none;
-        margin-bottom: 20px;
-        margin-top: 34px;
-    }
+.card__container.palette2 {
+  .card__container--name {
+    color: $dried-blood;
+  }
+  .card__container--verticalBorder {
+    border-color: $rusty-red;
+  }
+  .card__rrss {
+    color: $dried-blood;
+    border-color: $tomato;
+  }
+}
 
-    &__button{
-        border: none;
-        background-color: transparent;
-        font-size:12px;
-        font-family: $open;
-        text-transform: uppercase;
-        color: $color-letter;
-        cursor: pointer;
-    }    
- }
-
- .list__elements{  
-    color:$dark-green-blue;
-    font-size: 18px;
-    width: 22px;
-    height: 22px;
- }
-
+.card__container.palette3 {
+  .card__container--name {
+    color: $slate;
+  }
+  .card__container--verticalBorder {
+    border-color: $faded-orange;
+  }
+  .card__rrss {
+    color: $slate;
+    border-color: $light-grey-blue;
+  }
+}
