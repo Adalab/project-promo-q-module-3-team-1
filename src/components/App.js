@@ -5,16 +5,15 @@ import '../styles/App.scss';
 
 import { useState } from 'react';
 
-function App () {
-
+function App() {
   const [dataCard, setDataCard] = useState({
-    palette: "1",
-    name: "",
-    job: "",
-    email: "",
-    phone: "",
-    linkedin: "",
-    github: "",
+    palette: '1',
+    name: '',
+    job: '',
+    email: '',
+    phone: '',
+    linkedin: '',
+    github: '',
   });
 
   const handleInput = (event) => {
@@ -22,23 +21,22 @@ function App () {
     const inputName = event.target.name;
     setDataCard({
       ...dataCard,
-      [inputName]: inputValue
-    })
-  }
+      [inputName]: inputValue,
+    });
+  };
 
   const handleReset = (event) => {
     event.preventDefault();
     setDataCard({
-      palette: "1",
-      name: "",
-      job: "",
-      email: "",
-      phone: "",
-      linkedin: "",
-      github: "",
-    })
-  }
-
+      palette: '1',
+      name: '',
+      job: '',
+      email: '',
+      phone: '',
+      linkedin: '',
+      github: '',
+    });
+  };
 
   return (
     <>
@@ -53,12 +51,13 @@ function App () {
       <main className="main__forflex">
         <section className="section__preview">
           <article className="card">
-
             <button className="resetButton js-btnPreview" onClick={handleReset}>
               <i className="trashIcon fa-solid fa-trash-can"> </i> Reset
             </button>
 
-            <div className={`card__container palette${dataCard.palette} js-card__container`}>
+            <div
+              className={`card__container palette${dataCard.palette} js-card__container`}
+            >
               <div className="card__container--verticalBorder">
                 <h2 className="card__container--name js-namePreview">
                   {dataCard.name || `Nombre y Apellidos`}
@@ -69,27 +68,43 @@ function App () {
               </div>
               <div
                 className="card__container--image js-imgPreview js__profile-preview"
-              // style= { {backgroundImage: "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTil9_c3PpcUTAx2vmHH6srdREmI1X8474m3Q&usqp=CAU')", backgroundSize: "cover"}}
+                // style= { {backgroundImage: "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTil9_c3PpcUTAx2vmHH6srdREmI1X8474m3Q&usqp=CAU')", backgroundSize: "cover"}}
               ></div>
               <nav>
                 <ul className="card__container--list">
                   <li className="list__elements ">
-                    <a target="blank" href={`tel:${dataCard.phone}`} className="js_link_phone">
+                    <a
+                      target="blank"
+                      href={`tel:${dataCard.phone}`}
+                      className="js_link_phone"
+                    >
                       <i className="card__rrss fa-solid fa-mobile-screen-button js-iconPreview"></i>
                     </a>
                   </li>
                   <li className="list__elements">
-                    <a target="blank" href={`mailto:${dataCard.email}`} className="js_link_email">
+                    <a
+                      target="blank"
+                      href={`mailto:${dataCard.email}`}
+                      className="js_link_email"
+                    >
                       <i className="fa-solid fa-envelope card__rrss js-iconPreview"></i>
                     </a>
                   </li>
                   <li className="list__elements">
-                    <a target="blank" href={dataCard.linkedin} className="js_link_linkedin">
+                    <a
+                      target="blank"
+                      href={`https://www.linkedin.com/in/${dataCard.linkedin} `}
+                      className="js_link_linkedin"
+                    >
                       <i className="card__rrss fa-brands fa-linkedin-in js-iconPreview"></i>
                     </a>
                   </li>
                   <li className="list__elements">
-                    <a target="blank" href={dataCard.github} className="js_link_github">
+                    <a
+                      target="blank"
+                      href={`https://github.com/${dataCard.github}`}
+                      className="js_link_github"
+                    >
                       <i className="card__rrss fa-brands fa-github-alt js-iconPreview"></i>
                     </a>
                   </li>
@@ -121,7 +136,7 @@ function App () {
                       type="radio"
                       value="1"
                       name="palette"
-                      checked={dataCard.palette === "1"}
+                      checked={dataCard.palette === '1'}
                       onChange={handleInput}
                     />
                     <div className="palette-rectangle">
@@ -138,7 +153,7 @@ function App () {
                       type="radio"
                       value="2"
                       name="palette"
-                      checked={dataCard.palette === "2"}
+                      checked={dataCard.palette === '2'}
                       onChange={handleInput}
                     />
                     <div className="palette-rectangle">
@@ -155,7 +170,7 @@ function App () {
                       type="radio"
                       value="3"
                       name="palette"
-                      checked={dataCard.palette === "3"}
+                      checked={dataCard.palette === '3'}
                       onChange={handleInput}
                     />
                     <div className="palette-rectangle">
