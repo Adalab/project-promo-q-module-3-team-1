@@ -1,19 +1,21 @@
 const  Preview = (props) => { 
+  console.log(props);
     return ( <section className="section__preview">
     <article className="card">
-      <button className="resetButton js-btnPreview" onClick={handleReset}>
+      <button className="resetButton js-btnPreview" onClick={props.handleReset}>
         <i className="trashIcon fa-solid fa-trash-can"> </i> Reset
       </button>
 
       <div
-        className={`card__container palette${dataCard.palette} js-card__container`}
+        className={`card__container palette
+        ${props.dataCardPalette} js-card__container`}
       >
         <div className="card__container--verticalBorder">
           <h2 className="card__container--name js-namePreview">
-            {dataCard.name || `Nombre y Apellidos`}
+            {props.dataCardName || `Nombre y Apellidos`}
           </h2>
           <p className="card__container--paragraph js-positionPreview">
-            {dataCard.job || `Front-end developer`}
+            { props.dataCardJob|| `Front-end developer`}
           </p>
         </div>
         <div
@@ -25,7 +27,7 @@ const  Preview = (props) => {
             <li className="list__elements ">
               <a
                 target="blank"
-                href={`tel:${dataCard.phone}`}
+                href={`tel:${ props.dataCardPhone}`}
                 className="js_link_phone"
               >
                 <i className="card__rrss fa-solid fa-mobile-screen-button js-iconPreview"></i>
@@ -34,7 +36,7 @@ const  Preview = (props) => {
             <li className="list__elements">
               <a
                 target="blank"
-                href={`mailto:${dataCard.email}`}
+                href={`mailto:${props.dataCardEmail}`}
                 className="js_link_email"
               >
                 <i className="fa-solid fa-envelope card__rrss js-iconPreview"></i>
@@ -43,7 +45,7 @@ const  Preview = (props) => {
             <li className="list__elements">
               <a
                 target="blank"
-                href={`https://www.linkedin.com/in/${dataCard.linkedin} `}
+                href={`https://www.linkedin.com/in/${props.dataCardLinkedin} `}
                 className="js_link_linkedin"
               >
                 <i className="card__rrss fa-brands fa-linkedin-in js-iconPreview"></i>
@@ -52,7 +54,7 @@ const  Preview = (props) => {
             <li className="list__elements">
               <a
                 target="blank"
-                href={`https://github.com/${dataCard.github}`}
+                href={`https://github.com/${props.dataCardGithub}`}
                 className="js_link_github"
               >
                 <i className="card__rrss fa-brands fa-github-alt js-iconPreview"></i>

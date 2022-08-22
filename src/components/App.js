@@ -10,7 +10,7 @@ import Footer from './Footer';
 import Design from './Design';
 import Fill from './Fill';
 import Share from './Share';
-import Preview  from './Preview';
+import Preview from './Preview';
 
 function App() {
   const [resultCard, setResultCard] = useState({});
@@ -59,13 +59,22 @@ function App() {
     <>
       <Header logoHeader={logoHeader} />
       <main className="main__forflex">
-       <Preview/>
+        <Preview
+        handleReset = {handleReset() }
+          dataCardPalette={dataCard.palette}
+          dataCardName={dataCard.name}
+          dataCardJob={dataCard.job}
+          dataCardPhone={dataCard.phone}
+          dataCardEmail={dataCard.email}
+          dataCardLinkedin={dataCard.linkedin}
+          dataCardGithub={dataCard.github}
+        />
 
         <section className="form-section">
           <form className="form js_allInputs" action="#" method="POST">
             <Design />
             <Fill />
-           <Share/>
+            <Share />
           </form>
         </section>
       </main>
