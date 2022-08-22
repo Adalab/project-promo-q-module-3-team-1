@@ -3,8 +3,11 @@ import logoFooter from '../images/logo-adalab.png';
 
 import '../styles/App.scss';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import SendToApi from '../services/SendToApi';
+import localStorage from '../services/localStorage';
+
+
 import Header from './Header';
 import Footer from './Footer';
 import Design from './Design';
@@ -24,8 +27,14 @@ function App() {
     github: '',
     photo:
       'https://www.latimes.com/espanol/vida-y-estilo/articulo/2020-08-08/hoyla-recuento-11-cosas-aman-gatos-top',
-  });
+  }); 
 
+  useEffect (()=>{ 
+    localStorage.set('userData', dataCard) },
+    [dataCard]);
+    
+  
+  
   const handleCreatedCard = (event) => {
     event.preventDefault();
     SendToApi(dataCard).then((info) => {
@@ -42,25 +51,14 @@ function App() {
     });
   };
 
-  const handleReset = (event) => {
-    event.preventDefault();
-    setDataCard({
-      palette: '1',
-      name: '',
-      job: '',
-      email: '',
-      phone: '',
-      linkedin: '',
-      github: '',
-    });
-  };
+  
 
   return (
     <>
       <Header logoHeader={logoHeader} />
       <main className="main__forflex">
         <Preview
-        handleReset = {handleReset() }
+        
           dataCardPalette={dataCard.palette}
           dataCardName={dataCard.name}
           dataCardJob={dataCard.job}

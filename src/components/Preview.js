@@ -1,8 +1,20 @@
 const  Preview = (props) => { 
+  const handleReset = (event) => {
+    event.preventDefault();
+    props.setDataCard({
+      palette: '1',
+      name: '',
+      job: '',
+      email: '',
+      phone: '',
+      linkedin: '',
+      github: '',
+    });
+  };
   console.log(props);
     return ( <section className="section__preview">
     <article className="card">
-      <button className="resetButton js-btnPreview" onClick={props.handleReset}>
+      <button className="resetButton js-btnPreview" onClick={handleReset}>
         <i className="trashIcon fa-solid fa-trash-can"> </i> Reset
       </button>
 
