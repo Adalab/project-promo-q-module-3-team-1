@@ -19,8 +19,8 @@ const Design  = (props) => {
                 type="radio"
                 value="1"
                 name="palette"
-                checked={dataCard.palette === '1'}
-                onChange={handleInput}
+                checked={props.dataCard.palette === '1'}
+                onChange={props.handleInput}
               />
               <div className="palette-rectangle">
                 <div className="rectangle color1"></div>
@@ -36,8 +36,8 @@ const Design  = (props) => {
                 type="radio"
                 value="2"
                 name="palette"
-                checked={dataCard.palette === '2'}
-                onChange={handleInput}
+                checked={props.dataCard.palette === '2'}
+                onChange={props.handleInput}
               />
               <div className="palette-rectangle">
                 <div className="rectangle color4"></div>
@@ -53,8 +53,8 @@ const Design  = (props) => {
                 type="radio"
                 value="3"
                 name="palette"
-                checked={dataCard.palette === '3'}
-                onChange={handleInput}
+                checked={props.dataCard.palette === '3'}
+                onChange={props.handleInput}
               />
               <div className="palette-rectangle">
                 <div className="rectangle color7"></div>

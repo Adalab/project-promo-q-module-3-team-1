@@ -19,8 +19,8 @@ const Fill = (props) => {
           id="name"
           type="text"
           name="name"
-          value={dataCard.name}
-          onChange={handleInput}
+          value={props.dataCard.name}
+          onChange={props.handleInput}
         />
         <label className="fillform__label" htmlFor="job">
           Puesto
@@ -31,8 +31,8 @@ const Fill = (props) => {
           id="job"
           type="text"
           name="job"
-          value={dataCard.job}
-          onChange={handleInput}
+          value={props.dataCard.job}
+          onChange={props.handleInput}
         />
         <label className="fillform__label" htmlFor="profile_image">
           Imagen de perfil
@@ -61,8 +61,8 @@ const Fill = (props) => {
           type="email"
           id="email"
           name="email"
-          value={dataCard.email}
-          onChange={handleInput}
+          value={props.dataCard.email}
+          onChange={props.handleInputeInput}
         />
         <label className="fillform__label" htmlFor="phone">
           Teléfono
@@ -73,8 +73,8 @@ const Fill = (props) => {
           type="tel"
           id="phone"
           name="phone"
-          value={dataCard.phone}
-          onChange={handleInput}
+          value={props.dataCard.phone}
+          onChange={props.handleInput}
         />
         <label className="fillform__label" htmlFor="linkedin">
           LinkedIn
@@ -84,8 +84,8 @@ const Fill = (props) => {
           placeholder="Ej: linkedin.com/in/sally.hill"
           type="text"
           name="linkedin"
-          value={dataCard.linkedin}
-          onChange={handleInput}
+          value={props.dataCard.linkedin}
+          onChange={props.handleInput}
         />
         <label className="fillform__label" htmlFor="github">
           Github
@@ -95,8 +95,8 @@ const Fill = (props) => {
           placeholder="Ej: @sally-hill"
           type="text"
           name="github"
-          value={dataCard.github}
-          onChange={handleInput}
+          value={props.dataCard.github}
+          onChange={props.handleInput}
         />
       </section>
     </fieldset>);

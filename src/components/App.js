@@ -51,28 +51,33 @@ function App() {
     });
   };
 
-  
+  const handleReset = (event) => {
+    event.preventDefault();
+    setDataCard({
+      palette: '1',
+      name: '',
+      job: '',
+      email: '',
+      phone: '',
+      linkedin: '',
+      github: '',
+    });
+  };
 
   return (
     <>
       <Header logoHeader={logoHeader} />
       <main className="main__forflex">
         <Preview
-        
-          dataCardPalette={dataCard.palette}
-          dataCardName={dataCard.name}
-          dataCardJob={dataCard.job}
-          dataCardPhone={dataCard.phone}
-          dataCardEmail={dataCard.email}
-          dataCardLinkedin={dataCard.linkedin}
-          dataCardGithub={dataCard.github}
+          handleReset={handleReset}        
+          dataCard = {dataCard}
         />
 
         <section className="form-section">
           <form className="form js_allInputs" action="#" method="POST">
-            <Design />
-            <Fill />
-            <Share />
+            <Design handleInput={handleInput} dataCard={dataCard}/>
+            <Fill handleInput={handleInput} dataCard={dataCard}/>
+            <Share handleCreatedCard={handleCreatedCard} resultCard={resultCard}/>
           </form>
         </section>
       </main>

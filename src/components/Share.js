@@ -10,7 +10,7 @@ const Share = (props) => {
         </legend>
         <div className="buttondiv js__content_shareOne">
           <button
-            onClick={handleCreatedCard}
+            onClick={props.handleCreatedCard}
             className="buttondiv-share js-btnShare"
           >
             <i className="share-card fa-solid fa-address-card"></i>{' '}
@@ -23,16 +23,16 @@ const Share = (props) => {
           </h6>
           <a
             target="_blank"
-            href=""
+            href='{props.resultCard.cardURL}'
             className="buttontwitter-paragraph js-section-url"
           >
             {' '}
-            {resultCard.cardURL}
+            {props.resultCard.cardURL}
           </a>
 
           <a
             target="_blank"
-            href=""
+            href="./"
             className="js-twitter-link buttontwitter-button"
           >
             <i className="fa-brands fa-twitter share-in-twitter"></i>
