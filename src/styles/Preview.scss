@@ -1,3 +1,5 @@
+@import 'core/variables';
+
 .card {
   background: linear-gradient($silver, $pale-grey);
   height: 457px;
@@ -34,7 +36,7 @@
     }
 
     &--image {
-      background: url(../../images/image-react.png) center no-repeat;
+      background: url(../images/image-react.png) center no-repeat;
       background-size: contain;
       width: 240px;
       height: 200px;

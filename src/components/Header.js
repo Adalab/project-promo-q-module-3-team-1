@@ -1,3 +1,5 @@
+import '../styles/Header.scss';
+
 const Header = (props) => { 
     return (<header>
         <img

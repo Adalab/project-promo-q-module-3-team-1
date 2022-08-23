@@ -1,3 +1,5 @@
+import '../styles/Fill.scss';
+
 const Fill = (props) => { 
     return (<fieldset>
       <section className="fill line">
@@ -62,7 +64,7 @@ const Fill = (props) => {
           id="email"
           name="email"
           value={props.dataCard.email}
-          onChange={props.handleInputeInput}
+          onChange={props.handleInput}
         />
         <label className="fillform__label" htmlFor="phone">
           Teléfono

@@ -1,3 +1,5 @@
+import '../styles/Design.scss';
+
 const Design  = (props) => { 
     return ( <fieldset>
         <div className="fill">

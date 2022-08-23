@@ -1,3 +1,5 @@
+import '../styles/Share.scss';
+
 const Share = (props) => { 
     return ( <fieldset>
       <div className="share">

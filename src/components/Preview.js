@@ -1,3 +1,5 @@
+import '../styles/Preview.scss';
+
 const  Preview = (props) => { 
  
   console.log(props);
@@ -9,7 +11,7 @@ const  Preview = (props) => {
 
       <div
         className={`card__container palette
-        ${props.dataCard.palette} js-card__container`}
+        ${props.dataCard.palette } js-card__container`}
       >
         <div className="card__container--verticalBorder">
           <h2 className="card__container--name js-namePreview">
