@@ -1,6 +1,13 @@
 import '../styles/Fill.scss';
+import GetAvatar from './GetAvatar';
 
 const Fill = (props) => { 
+  const handleInput = (event) => {
+    const inputValue = event.target.value;
+    const inputName = event.target.name;
+    props.handleInput ({value:inputValue, name:inputName});
+  }
+
     return (<fieldset>
       <section className="fill line">
         <legend className="fill__title js__fill">
@@ -22,7 +29,7 @@ const Fill = (props) => {
           type="text"
           name="name"
           value={props.dataCard.name}
-          onChange={props.handleInput}
+          onChange={handleInput}
         />
         <label className="fillform__label" htmlFor="job">
           Puesto
@@ -34,12 +41,13 @@ const Fill = (props) => {
           type="text"
           name="job"
           value={props.dataCard.job}
-          onChange={props.handleInput}
+          onChange={handleInput}
         />
         <label className="fillform__label" htmlFor="profile_image">
           Imagen de perfil
         </label>
-        <div className="fillform__image">
+        <GetAvatar avatar={props.avatar} updateAvatar={props.updateAvatar}/>
+        {/* <div className="fillform__image">
           <label
             className="fillform__image--button js-addImage"
             htmlFor="photo"
@@ -53,7 +61,8 @@ const Fill = (props) => {
             id="photo"
           />
           <div className="fillform__image--square js__profile-image"></div>
-        </div>
+        </div> */}
+        
         <label className="fillform__label" htmlFor="email">
           Email
         </label>
@@ -64,7 +73,7 @@ const Fill = (props) => {
           id="email"
           name="email"
           value={props.dataCard.email}
-          onChange={props.handleInput}
+          onChange={handleInput}
         />
         <label className="fillform__label" htmlFor="phone">
           Teléfono
@@ -76,7 +85,7 @@ const Fill = (props) => {
           id="phone"
           name="phone"
           value={props.dataCard.phone}
-          onChange={props.handleInput}
+          onChange={handleInput}
         />
         <label className="fillform__label" htmlFor="linkedin">
           LinkedIn
@@ -87,7 +96,7 @@ const Fill = (props) => {
           type="text"
           name="linkedin"
           value={props.dataCard.linkedin}
-          onChange={props.handleInput}
+          onChange={handleInput}
         />
         <label className="fillform__label" htmlFor="github">
           Github
@@ -98,7 +107,7 @@ const Fill = (props) => {
           type="text"
           name="github"
           value={props.dataCard.github}
-          onChange={props.handleInput}
+          onChange={handleInput}
         />
       </section>
     </fieldset>);

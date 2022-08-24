@@ -1,4 +1,4 @@
-import logoHeader from '../images/logo-awesome-profile-cards.png';
+import logoHeader from '../images/logo-git-brunch.png';
 import logoFooter from '../images/logo-adalab.png';
 
 import '../styles/App.scss';
@@ -7,13 +7,8 @@ import { useEffect, useState } from 'react';
 import SendToApi from '../services/SendToApi';
 import localStorage from '../services/localStorage';
 
+import Card from './Card';
 
-import Header from './Header';
-import Footer from './Footer';
-import Design from './Design';
-import Fill from './Fill';
-import Share from './Share';
-import Preview from './Preview';
 
 function App() {
   const [resultCard, setResultCard] = useState({});
@@ -25,26 +20,26 @@ function App() {
     phone: '',
     linkedin: '',
     github: '',
-    photo:
-      'https://www.latimes.com/espanol/vida-y-estilo/articulo/2020-08-08/hoyla-recuento-11-cosas-aman-gatos-top',
+    photo:'',
   }); 
+
+  const [avatar, setAvatar] = useState('');
+  const updateAvatar = (avatar) => {
+    setAvatar(avatar);
+  };
 
   useEffect (()=>{ 
     localStorage.set('userData', dataCard) },
     [dataCard]);
     
-  
-  
-  const handleCreatedCard = (event) => {
-    event.preventDefault();
+  const handleCreatedCard = () => {
     SendToApi(dataCard).then((info) => {
       setResultCard(info);
-      console.log(info);
     });
   };
-  const handleInput = (event) => {
-    const inputValue = event.target.value;
-    const inputName = event.target.name;
+  const handleInput = (data) => {
+    const inputValue = data.value;
+    const inputName = data.name;
     setDataCard({
       ...dataCard,
       [inputName]: inputValue,
@@ -61,29 +56,12 @@ function App() {
       phone: '',
       linkedin: '',
       github: '',
+      photo:'',
     });
   };
 
   return (
-    <>
-      <Header logoHeader={logoHeader} />
-      <main className="main__forflex">
-        <Preview
-          handleReset={handleReset}        
-          dataCard = {dataCard}
-        />
-
-        <section className="form-section">
-          <form className="form js_allInputs" action="#" method="POST">
-            <Design handleInput={handleInput} dataCard={dataCard}/>
-            <Fill handleInput={handleInput} dataCard={dataCard}/>
-            <Share handleCreatedCard={handleCreatedCard} resultCard={resultCard}/>
-          </form>
-        </section>
-      </main>
-
-      <Footer logoFooter={logoFooter} />
-    </>
+    <Card logoHeader={logoHeader} resultCard={resultCard} handleCreatedCard={handleCreatedCard} handleInput={handleInput} dataCard={dataCard} handleReset={handleReset} logoFooter={logoFooter} avatar={avatar} updateAvatar={updateAvatar}/>
   );
 }
 

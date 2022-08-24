@@ -1,5 +1,7 @@
 import '../styles/Preview.scss';
 
+import GetAvatar from './GetAvatar';
+
 const  Preview = (props) => { 
  
   console.log(props);
@@ -10,8 +12,7 @@ const  Preview = (props) => {
       </button>
 
       <div
-        className={`card__container palette
-        ${props.dataCard.palette } js-card__container`}
+        className={`card__container palette${props.dataCard.palette} js-card__container`}
       >
         <div className="card__container--verticalBorder">
           <h2 className="card__container--name js-namePreview">
@@ -21,9 +22,9 @@ const  Preview = (props) => {
             { props.dataCard.job|| `Front-end developer`}
           </p>
         </div>
+        
         <div
           className="card__container--image js-imgPreview js__profile-preview"
-          // style= { {backgroundImage: "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTil9_c3PpcUTAx2vmHH6srdREmI1X8474m3Q&usqp=CAU')", backgroundSize: "cover"}}
         ></div>
         <nav>
           <ul className="card__container--list">

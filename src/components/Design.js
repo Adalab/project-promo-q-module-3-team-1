@@ -1,6 +1,12 @@
 import '../styles/Design.scss';
-
 const Design  = (props) => { 
+  const handleInput = (event) => {
+    const inputValue = event.target.value;
+    const inputName = event.target.name;
+    props.handleInput ({value:inputValue, name:inputName});
+  }
+
+
     return ( <fieldset>
         <div className="fill">
           <legend className="fill__title js__design">
@@ -22,7 +28,7 @@ const Design  = (props) => {
                 value="1"
                 name="palette"
                 checked={props.dataCard.palette === '1'}
-                onChange={props.handleInput}
+                onChange={handleInput}
               />
               <div className="palette-rectangle">
                 <div className="rectangle color1"></div>
@@ -39,7 +45,7 @@ const Design  = (props) => {
                 value="2"
                 name="palette"
                 checked={props.dataCard.palette === '2'}
-                onChange={props.handleInput}
+                onChange={handleInput}
               />
               <div className="palette-rectangle">
                 <div className="rectangle color4"></div>
@@ -56,7 +62,7 @@ const Design  = (props) => {
                 value="3"
                 name="palette"
                 checked={props.dataCard.palette === '3'}
-                onChange={props.handleInput}
+                onChange={handleInput}
               />
               <div className="palette-rectangle">
                 <div className="rectangle color7"></div>
