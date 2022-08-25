@@ -1,5 +1,6 @@
 import '../styles/layout/Landing.scss';
 import { Link } from 'react-router-dom';
+import image from '../images/logo-git-brunch.png';
 
 const Landing = () => {
   return (
@@ -8,7 +9,7 @@ const Landing = () => {
         <section className="main__section">
           <img
             className="main__section--img"
-            src="./assets/images/logo-awesome-profile-cards.png"
+            src={image}
             alt="imagen logo"
             title="logo"
           />
