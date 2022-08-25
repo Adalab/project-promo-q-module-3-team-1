@@ -2,13 +2,13 @@ import logoHeader from '../images/logo-git-brunch.png';
 import logoFooter from '../images/logo-adalab.png';
 
 import '../styles/App.scss';
-
+import { Routes, Route } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import SendToApi from '../services/SendToApi';
 import localStorage from '../services/localStorage';
 
 import Card from './Card';
-
+import Landing from './Landing';
 
 function App() {
   const [resultCard, setResultCard] = useState({});
@@ -20,18 +20,18 @@ function App() {
     phone: '',
     linkedin: '',
     github: '',
-    photo:'',
-  }); 
+    photo: '',
+  });
 
   const [avatar, setAvatar] = useState('');
   const updateAvatar = (avatar) => {
     setAvatar(avatar);
   };
 
-  useEffect (()=>{ 
-    localStorage.set('userData', dataCard) },
-    [dataCard]);
-    
+  useEffect(() => {
+    localStorage.set('userData', dataCard);
+  }, [dataCard]);
+
   const handleCreatedCard = () => {
     SendToApi(dataCard).then((info) => {
       setResultCard(info);
@@ -56,12 +56,32 @@ function App() {
       phone: '',
       linkedin: '',
       github: '',
-      photo:'',
+      photo: '',
     });
   };
 
   return (
-    <Card logoHeader={logoHeader} resultCard={resultCard} handleCreatedCard={handleCreatedCard} handleInput={handleInput} dataCard={dataCard} handleReset={handleReset} logoFooter={logoFooter} avatar={avatar} updateAvatar={updateAvatar}/>
+    <>
+      <Routes>
+        <Route path="/" element={<Landing />}></Route>
+        <Route
+          path="/card"
+          element={
+            <Card
+              logoHeader={logoHeader}
+              resultCard={resultCard}
+              handleCreatedCard={handleCreatedCard}
+              handleInput={handleInput}
+              dataCard={dataCard}
+              handleReset={handleReset}
+              logoFooter={logoFooter}
+              avatar={avatar}
+              updateAvatar={updateAvatar}
+            />
+          }
+        ></Route>
+      </Routes>
+    </>
   );
 }
 
