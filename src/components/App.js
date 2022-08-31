@@ -13,16 +13,18 @@ import Landing from './Landing';
 
 function App() {
   const [resultCard, setResultCard] = useState({});
-  const [dataCard, setDataCard] = useState({
-    palette: '1',
-    name: '',
-    job: '',
-    email: '',
-    phone: '',
-    linkedin: '',
-    github: '',
-    photo: '',
-  });
+  const [dataCard, setDataCard] = useState(
+    localStorage.get('userData', {
+      palette: '1',
+      name: '',
+      job: '',
+      email: '',
+      phone: '',
+      linkedin: '',
+      github: '',
+      photo: logo,
+    })
+  );
 
   const [avatar, setAvatar] = useState(logo);
   const updateAvatar = (avatar) => {
@@ -50,6 +52,7 @@ function App() {
 
   const handleReset = (event) => {
     event.preventDefault();
+    setAvatar(logo);
     setDataCard({
       palette: '1',
       name: '',
@@ -58,7 +61,7 @@ function App() {
       phone: '',
       linkedin: '',
       github: '',
-      photo: '',
+      photo: logo,
     });
   };
 

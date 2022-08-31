@@ -19,7 +19,10 @@ const Preview = (props) => {
             </p>
           </div>
 
-          <div className="card__container--image "></div>
+          <img
+            src={props.dataCard.photo}
+            className="card__container--image "
+          ></img>
           <nav>
             <ul className="card__container--list">
               <li className="card__containerIcon">
