@@ -33,7 +33,7 @@
     }
 
     &--verticalBorder {
-      border-left: 5px
+      border-left: 5px solid;
     }
 
     &--image {
@@ -47,24 +47,23 @@
       display: flex;
       gap: 20px;
       padding-left: 20px;
-      margin-top: 15px;
     }
   }
 
-  &__rrss {
+  &__containerIcon {
     border: 2px solid;
     border-radius: 50%;
-    width: 25px;
-    height: 22px;
-    color: $dark-green-blue;
+    width: 32px;
+    height: 32px;
     text-align: center;
-    padding: 5px 3px 3px 3px;
   }
 
-  @media all and (min-width: 768px) {
-    height: 100%;
+  &__rrss {
+    margin-top: 4px;
+    font-size: 20px;
   }
 }
+
 
 .resetButton {
   border: 1px solid $white-six;
@@ -79,14 +78,8 @@
   margin-left: -170px;
 }
 
-.list__elements {
-  color: $dark-green-blue;
-  font-size: 18px;
-  width: 22px;
-  height: 22px;
-}
 
-.card__container.palette1 {
+.palette1 {
   .card__container--name {
     color: $dark-green-blue;
   }
@@ -95,13 +88,18 @@
     border-color: $dirty-blue;
   }
 
+  .card__containerIcon {
+    color: $dark-green-blue;
+    border-color: $hospital-green;
+  }
+
   .card__rrss {
     color: $dark-green-blue;
     border-color: $hospital-green;
   }
 }
 
-.card__container.palette2 {
+.palette2 {
   .card__container--name {
     color: $dried-blood;
   }
@@ -110,19 +108,29 @@
     border-color: $rusty-red;
   }
 
+  .card__containerIcon {
+    color: $dried-blood;
+    border-color: $tomato;
+  }
+
   .card__rrss {
     color: $dried-blood;
     border-color: $tomato;
   }
 }
 
-.card__container.palette3 {
+.palette3 {
   .card__container--name {
     color: $slate;
   }
 
   .card__container--verticalBorder {
     border-color: $faded-orange;
+  }
+
+  .card__containerIcon {
+    color: $slate;
+    border-color: $light-grey-blue;
   }
 
   .card__rrss {

@@ -24,7 +24,7 @@ const Preview = (props) => {
           <div className="card__container--image "></div>
           <nav>
             <ul className="card__container--list">
-              <li className="list__elements ">
+              <li className="card__containerIcon">
                 <a
                   target="blank"
                   href={`tel:${props.dataCard.phone}`}
@@ -33,12 +33,12 @@ const Preview = (props) => {
                   <i className="card__rrss fa-solid fa-mobile-screen-button "></i>
                 </a>
               </li>
-              <li className="list__elements">
+              <li className="card__containerIcon">
                 <a target="blank" href={`mailto:${props.dataCard.email}`}>
                   <i className="fa-solid fa-envelope card__rrss"></i>
                 </a>
               </li>
-              <li className="list__elements">
+              <li className="card__containerIcon">
                 <a
                   target="blank"
                   href={`https://www.linkedin.com/in/${props.dataCard.linkedin} `}
@@ -46,7 +46,7 @@ const Preview = (props) => {
                   <i className="card__rrss fa-brands fa-linkedin-in "></i>
                 </a>
               </li>
-              <li className="list__elements">
+              <li className="card__containerIcon">
                 <a
                   target="blank"
                   href={`https://github.com/${props.dataCard.github}`}
