@@ -13,7 +13,7 @@ const Card = (props) => {
         <Preview handleReset={props.handleReset} dataCard={props.dataCard} />
 
         <section className="form-section">
-          <form className="form js_allInputs" action="#" method="POST">
+          <form className="form" action="#" method="POST">
             <Design handleInput={props.handleInput} dataCard={props.dataCard} />
             <Fill
               handleInput={props.handleInput}

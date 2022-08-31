@@ -26,11 +26,7 @@ const Preview = (props) => {
           <nav>
             <ul className="card__container--list">
               <li className="card__containerIcon">
-                <a
-                  target="blank"
-                  href={`tel:${props.dataCard.phone}`}
-                  className="js_link_phone"
-                >
+                <a target="blank" href={`tel:${props.dataCard.phone}`}>
                   <i className="card__rrss fa-solid fa-mobile-screen-button "></i>
                 </a>
               </li>
@@ -51,7 +47,6 @@ const Preview = (props) => {
                 <a
                   target="blank"
                   href={`https://github.com/${props.dataCard.github}`}
-                  className="js_link_github"
                 >
                   <i className="card__rrss fa-brands fa-github-alt "></i>
                 </a>

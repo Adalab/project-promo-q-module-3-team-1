@@ -11,18 +11,18 @@ const Fill = (props) => {
   return (
     <fieldset>
       <section className="fill line">
-        <legend className="fill__title js__fill">
+        <legend className="fill__title ">
           <i className="keyboard fa-solid fa-keyboard"></i>
-          <span className="fill__title--text js__title_fill">Rellena</span>
-          <i className="fa-solid fa-angle-up js_arrowFill"></i>
+          <span className="fill__title--text ">Rellena</span>
+          <i className="fa-solid fa-angle-up "></i>
         </legend>
       </section>
-      <section className="fillform js-sectionFill">
+      <section className="fillform ">
         <label className="fillform__label" htmlFor="name">
           Nombre Completo
         </label>
         <input
-          className="fillform__input js-inputName"
+          className="fillform__input "
           placeholder="Ej: Sally Jill"
           id="name"
           type="text"
@@ -34,7 +34,7 @@ const Fill = (props) => {
           Puesto
         </label>
         <input
-          className="fillform__input js-inputPosition"
+          className="fillform__input "
           placeholder="Ej: Front-end unicorn"
           id="job"
           type="text"
@@ -52,7 +52,7 @@ const Fill = (props) => {
           Email
         </label>
         <input
-          className="fillform__input js-inputEmail"
+          className="fillform__input "
           placeholder="Ej: sally.hill@gmail.com"
           type="email"
           id="email"
@@ -64,7 +64,7 @@ const Fill = (props) => {
           Teléfono
         </label>
         <input
-          className="fillform__input js-inputPhone"
+          className="fillform__input "
           placeholder="Ej: 555-55-55-55"
           type="tel"
           id="phone"
@@ -76,7 +76,7 @@ const Fill = (props) => {
           LinkedIn
         </label>
         <input
-          className="fillform__input js-inputLinkedin"
+          className="fillform__input "
           placeholder="Ej: linkedin.com/in/sally.hill"
           type="text"
           name="linkedin"
@@ -87,7 +87,7 @@ const Fill = (props) => {
           Github
         </label>
         <input
-          className="fillform__input js-inputGithub"
+          className="fillform__input "
           placeholder="Ej: @sally-hill"
           type="text"
           name="github"
