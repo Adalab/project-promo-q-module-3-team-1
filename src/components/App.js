@@ -1,4 +1,4 @@
-import logoHeader from '../images/logo-git-brunch.png';
+import logo from '../images/logo-git-brunch.png';
 
 import '../styles/App.scss';
 
@@ -24,9 +24,10 @@ function App() {
     photo: '',
   });
 
-  const [avatar, setAvatar] = useState('');
+  const [avatar, setAvatar] = useState(logo);
   const updateAvatar = (avatar) => {
     setAvatar(avatar);
+    setDataCard({ ...dataCard, photo: avatar });
   };
 
   useEffect(() => {
@@ -64,12 +65,13 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Landing />}></Route>
+        <Route path="/" element={<Landing />} />
+
         <Route
           path="/card"
           element={
             <Card
-              logoHeader={logoHeader}
+              logo={logo}
               resultCard={resultCard}
               handleCreatedCard={handleCreatedCard}
               handleInput={handleInput}
@@ -79,7 +81,7 @@ function App() {
               updateAvatar={updateAvatar}
             />
           }
-        ></Route>
+        />
       </Routes>
       <Footer />
     </>

@@ -8,7 +8,7 @@ const Header = (props) => {
         {' '}
         <img
           className="header__img"
-          src={props.logoHeader}
+          src={props.logo}
           alt="imagen logo"
           title="logo"
         />

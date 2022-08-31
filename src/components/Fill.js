@@ -1,20 +1,19 @@
 import '../styles/Fill.scss';
 import GetAvatar from './GetAvatar';
 
-const Fill = (props) => { 
+const Fill = (props) => {
   const handleInput = (event) => {
     const inputValue = event.target.value;
     const inputName = event.target.name;
-    props.handleInput ({value:inputValue, name:inputName});
-  }
+    props.handleInput({ value: inputValue, name: inputName });
+  };
 
-    return (<fieldset>
+  return (
+    <fieldset>
       <section className="fill line">
         <legend className="fill__title js__fill">
           <i className="keyboard fa-solid fa-keyboard"></i>
-          <span className="fill__title--text js__title_fill">
-            Rellena
-          </span>
+          <span className="fill__title--text js__title_fill">Rellena</span>
           <i className="fa-solid fa-angle-up js_arrowFill"></i>
         </legend>
       </section>
@@ -46,23 +45,9 @@ const Fill = (props) => {
         <label className="fillform__label" htmlFor="profile_image">
           Imagen de perfil
         </label>
-        <GetAvatar avatar={props.avatar} updateAvatar={props.updateAvatar}/>
-        {/* <div className="fillform__image">
-          <label
-            className="fillform__image--button js-addImage"
-            htmlFor="photo"
-          >
-            Añadir imagen
-          </label>
-          <input
-            className="hidden js__profile-upload-btn"
-            type="file"
-            name="photo"
-            id="photo"
-          />
-          <div className="fillform__image--square js__profile-image"></div>
-        </div> */}
-        
+
+        <GetAvatar avatar={props.avatar} updateAvatar={props.updateAvatar} />
+
         <label className="fillform__label" htmlFor="email">
           Email
         </label>
@@ -110,7 +95,7 @@ const Fill = (props) => {
           onChange={handleInput}
         />
       </section>
-    </fieldset>);
-}
-export default Fill; 
-
+    </fieldset>
+  );
+};
+export default Fill;

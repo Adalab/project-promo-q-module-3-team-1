@@ -1,7 +1,5 @@
 import '../styles/Preview.scss';
 
-import GetAvatar from './GetAvatar';
-
 const Preview = (props) => {
   console.log(props);
   return (

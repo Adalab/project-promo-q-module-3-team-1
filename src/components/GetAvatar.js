@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import defaultAvatar from '../images/logo-git-brunch.png';
-
 function GetAvatar(props) {
   const fr = new FileReader();
   const myFileField = React.createRef();
@@ -27,11 +25,10 @@ function GetAvatar(props) {
     props.updateAvatar(image);
   };
 
-  const avatar = props.avatar === '' ? defaultAvatar : props.avatar;
   return (
     <div className="fillform__image">
       <label className="fillform__image--button">
-      Añadir imagen
+        Añadir imagen
         <input
           type="file"
           name="photo"
@@ -44,7 +41,7 @@ function GetAvatar(props) {
 
       <div
         className="fillform__image--square"
-        style={{ backgroundImage: `url(${avatar})` }}
+        style={{ backgroundImage: `url(${props.avatar})` }}
       ></div>
     </div>
   );
