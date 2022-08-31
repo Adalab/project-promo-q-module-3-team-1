@@ -9,6 +9,7 @@
   align-items: center;
   padding-bottom: 20px;
   gap: 30px;
+
   &__container {
     background-color: $white-six;
     width: 240px;
@@ -24,7 +25,7 @@
       margin-bottom: 10px;
     }
 
-    & --paragraph {
+    &--paragraph {
       font-size: 16px;
       font-family: $montserrat-bold;
       padding-left: 20px;
@@ -32,7 +33,7 @@
     }
 
     &--verticalBorder {
-      border-left: 5px solid; //$dirty-blue;
+      border-left: 5px
     }
 
     &--image {
@@ -51,7 +52,7 @@
   }
 
   &__rrss {
-    border: 2px solid; //$hospital-green;
+    border: 2px solid;
     border-radius: 50%;
     width: 25px;
     height: 22px;
@@ -89,9 +90,11 @@
   .card__container--name {
     color: $dark-green-blue;
   }
+
   .card__container--verticalBorder {
     border-color: $dirty-blue;
   }
+
   .card__rrss {
     color: $dark-green-blue;
     border-color: $hospital-green;
@@ -102,9 +105,11 @@
   .card__container--name {
     color: $dried-blood;
   }
+
   .card__container--verticalBorder {
     border-color: $rusty-red;
   }
+
   .card__rrss {
     color: $dried-blood;
     border-color: $tomato;
@@ -115,9 +120,11 @@
   .card__container--name {
     color: $slate;
   }
+
   .card__container--verticalBorder {
     border-color: $faded-orange;
   }
+
   .card__rrss {
     color: $slate;
     border-color: $light-grey-blue;

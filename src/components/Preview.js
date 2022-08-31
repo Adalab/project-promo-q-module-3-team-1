@@ -2,73 +2,64 @@ import '../styles/Preview.scss';
 
 import GetAvatar from './GetAvatar';
 
-const  Preview = (props) => { 
- 
+const Preview = (props) => {
   console.log(props);
-    return ( <section className="section__preview">
-    <article className="card">
-      <button className="resetButton js-btnPreview" onClick={props.handleReset}>
-        <i className="trashIcon fa-solid fa-trash-can"> </i> Reset
-      </button>
+  return (
+    <section className="section__preview">
+      <article className="card">
+        <button className="resetButton" onClick={props.handleReset}>
+          <i className="trashIcon fa-solid fa-trash-can"> </i> Reset
+        </button>
 
-      <div
-        className={`card__container palette${props.dataCard.palette} js-card__container`}
-      >
-        <div className="card__container--verticalBorder">
-          <h2 className="card__container--name js-namePreview">
-            {props.dataCard.name || `Nombre y Apellidos`}
-          </h2>
-          <p className="card__container--paragraph js-positionPreview">
-            { props.dataCard.job|| `Front-end developer`}
-          </p>
+        <div className={`card__container palette${props.dataCard.palette} `}>
+          <div className="card__container--verticalBorder">
+            <h2 className="card__container--name">
+              {props.dataCard.name || `Nombre y Apellidos`}
+            </h2>
+            <p className="card__container--paragraph ">
+              {props.dataCard.job || `Front-end developer`}
+            </p>
+          </div>
+
+          <div className="card__container--image "></div>
+          <nav>
+            <ul className="card__container--list">
+              <li className="list__elements ">
+                <a
+                  target="blank"
+                  href={`tel:${props.dataCard.phone}`}
+                  className="js_link_phone"
+                >
+                  <i className="card__rrss fa-solid fa-mobile-screen-button "></i>
+                </a>
+              </li>
+              <li className="list__elements">
+                <a target="blank" href={`mailto:${props.dataCard.email}`}>
+                  <i className="fa-solid fa-envelope card__rrss"></i>
+                </a>
+              </li>
+              <li className="list__elements">
+                <a
+                  target="blank"
+                  href={`https://www.linkedin.com/in/${props.dataCard.linkedin} `}
+                >
+                  <i className="card__rrss fa-brands fa-linkedin-in "></i>
+                </a>
+              </li>
+              <li className="list__elements">
+                <a
+                  target="blank"
+                  href={`https://github.com/${props.dataCard.github}`}
+                  className="js_link_github"
+                >
+                  <i className="card__rrss fa-brands fa-github-alt "></i>
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
-        
-        <div
-          className="card__container--image js-imgPreview js__profile-preview"
-        ></div>
-        <nav>
-          <ul className="card__container--list">
-            <li className="list__elements ">
-              <a
-                target="blank"
-                href={`tel:${ props.dataCard.phone}`}
-                className="js_link_phone"
-              >
-                <i className="card__rrss fa-solid fa-mobile-screen-button js-iconPreview"></i>
-              </a>
-            </li>
-            <li className="list__elements">
-              <a
-                target="blank"
-                href={`mailto:${props.dataCard.email}`}
-                className="js_link_email"
-              >
-                <i className="fa-solid fa-envelope card__rrss js-iconPreview"></i>
-              </a>
-            </li>
-            <li className="list__elements">
-              <a
-                target="blank"
-                href={`https://www.linkedin.com/in/${props.dataCard.linkedin} `}
-                className="js_link_linkedin"
-              >
-                <i className="card__rrss fa-brands fa-linkedin-in js-iconPreview"></i>
-              </a>
-            </li>
-            <li className="list__elements">
-              <a
-                target="blank"
-                href={`https://github.com/${props.dataCard.github}`}
-                className="js_link_github"
-              >
-                <i className="card__rrss fa-brands fa-github-alt js-iconPreview"></i>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </article>
-  </section>);
-}
-export default Preview; 
-
+      </article>
+    </section>
+  );
+};
+export default Preview;

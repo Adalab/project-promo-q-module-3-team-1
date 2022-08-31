@@ -1,12 +1,13 @@
 import logoHeader from '../images/logo-git-brunch.png';
-import logoFooter from '../images/logo-adalab.png';
 
 import '../styles/App.scss';
+
 import { Routes, Route } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import SendToApi from '../services/SendToApi';
 import localStorage from '../services/localStorage';
 
+import Footer from './Footer';
 import Card from './Card';
 import Landing from './Landing';
 
@@ -74,13 +75,13 @@ function App() {
               handleInput={handleInput}
               dataCard={dataCard}
               handleReset={handleReset}
-              logoFooter={logoFooter}
               avatar={avatar}
               updateAvatar={updateAvatar}
             />
           }
         ></Route>
       </Routes>
+      <Footer />
     </>
   );
 }
