@@ -6,6 +6,10 @@ const Design = (props) => {
     props.handleInput({ value: inputValue, name: inputName });
   };
 
+  const handleClickRender = () => {
+    return <p></p>;
+  };
+
   return (
     <fieldset>
       <div className="fill">
