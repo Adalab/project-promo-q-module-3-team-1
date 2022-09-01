@@ -7,85 +7,93 @@ const Fill = (props) => {
     const inputName = event.target.name;
     props.handleInput({ value: inputValue, name: inputName });
   };
+
   const handleClickRender = () => {
-    return (<section className="fillform ">
-      <label className="fillform__label" htmlFor="name">
-        Nombre Completo
-      </label>
-      <input
-        className="fillform__input "
-        placeholder="Ej: Sally Jill"
-        id="name"
-        type="text"
-        name="name"
-        value={props.dataCard.name}
-        onChange={handleInput}
-      />
-      <label className="fillform__label" htmlFor="job">
-        Puesto
-      </label>
-      <input
-        className="fillform__input "
-        placeholder="Ej: Front-end unicorn"
-        id="job"
-        type="text"
-        name="job"
-        value={props.dataCard.job}
-        onChange={handleInput}
-      />
-      <label className="fillform__label" htmlFor="profile_image">
-        Imagen de perfil
-      </label>
 
-      <GetAvatar avatar={props.avatar} updateAvatar={props.updateAvatar} />
+    props.setIsCollapsed(props.isCollapsed === 2 ? 0 : 2)
 
-      <label className="fillform__label" htmlFor="email">
-        Email
-      </label>
-      <input
-        className="fillform__input "
-        placeholder="Ej: sally.hill@gmail.com"
-        type="email"
-        id="email"
-        name="email"
-        value={props.dataCard.email}
-        onChange={handleInput}
-      />
-      <label className="fillform__label" htmlFor="phone">
-        Teléfono
-      </label>
-      <input
-        className="fillform__input "
-        placeholder="Ej: 555-55-55-55"
-        type="tel"
-        id="phone"
-        name="phone"
-        value={props.dataCard.phone}
-        onChange={handleInput}
-      />
-      <label className="fillform__label" htmlFor="linkedin">
-        LinkedIn
-      </label>
-      <input
-        className="fillform__input "
-        placeholder="Ej: linkedin.com/in/sally.hill"
-        type="text"
-        name="linkedin"
-        value={props.dataCard.linkedin}
-        onChange={handleInput}
-      />
-      <label className="fillform__label" htmlFor="github">
-        Github
-      </label>
-      <input
-        className="fillform__input "
-        placeholder="Ej: @sally-hill"
-        type="text"
-        name="github"
-        value={props.dataCard.github}
-        onChange={handleInput}
-      />
-    </section>)
+  };
+  const htmlCollapse = () => {
+    if (props.isCollapsed === 2) {
+      return (<section className="fillform ">
+        <label className="fillform__label" htmlFor="name">
+          Nombre Completo
+        </label>
+        <input
+          className="fillform__input "
+          placeholder="Ej: Sally Jill"
+          id="name"
+          type="text"
+          name="name"
+          value={props.dataCard.name}
+          onChange={handleInput}
+        />
+        <label className="fillform__label" htmlFor="job">
+          Puesto
+        </label>
+        <input
+          className="fillform__input "
+          placeholder="Ej: Front-end unicorn"
+          id="job"
+          type="text"
+          name="job"
+          value={props.dataCard.job}
+          onChange={handleInput}
+        />
+        <label className="fillform__label" htmlFor="profile_image">
+          Imagen de perfil
+        </label>
+
+        <GetAvatar avatar={props.avatar} updateAvatar={props.updateAvatar} />
+
+        <label className="fillform__label" htmlFor="email">
+          Email
+        </label>
+        <input
+          className="fillform__input "
+          placeholder="Ej: sally.hill@gmail.com"
+          type="email"
+          id="email"
+          name="email"
+          value={props.dataCard.email}
+          onChange={handleInput}
+        />
+        <label className="fillform__label" htmlFor="phone">
+          Teléfono
+        </label>
+        <input
+          className="fillform__input "
+          placeholder="Ej: 555-55-55-55"
+          type="tel"
+          id="phone"
+          name="phone"
+          value={props.dataCard.phone}
+          onChange={handleInput}
+        />
+        <label className="fillform__label" htmlFor="linkedin">
+          LinkedIn
+        </label>
+        <input
+          className="fillform__input "
+          placeholder="Ej: linkedin.com/in/sally.hill"
+          type="text"
+          name="linkedin"
+          value={props.dataCard.linkedin}
+          onChange={handleInput}
+        />
+        <label className="fillform__label" htmlFor="github">
+          Github
+        </label>
+        <input
+          className="fillform__input "
+          placeholder="Ej: @sally-hill"
+          type="text"
+          name="github"
+          value={props.dataCard.github}
+          onChange={handleInput}
+        />
+      </section>)
+    }
   }
   return (
     <fieldset>
@@ -96,7 +104,7 @@ const Fill = (props) => {
           <i className="fa-solid fa-angle-up "></i>
         </legend>
       </section>
-
+      {htmlCollapse()}
     </fieldset>
   );
 };

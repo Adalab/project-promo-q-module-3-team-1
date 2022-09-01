@@ -11,8 +11,8 @@ import Footer from './Footer';
 import Card from './Card';
 import Landing from './Landing';
 
-function App() {
-  const [isCollapsed, setIsCollapsed ] = useState ( true)
+function App () {
+  const [isCollapsed, setIsCollapsed] = useState(1)
   const [resultCard, setResultCard] = useState({});
   const [dataCard, setDataCard] = useState(
     localStorage.get('userData', {
@@ -83,8 +83,8 @@ function App() {
               handleReset={handleReset}
               avatar={avatar}
               updateAvatar={updateAvatar}
-              isCollapsed = {isCollapsed}
-              setIsCollapsed = {setIsCollapsed }
+              isCollapsed={isCollapsed}
+              setIsCollapsed={setIsCollapsed}
             />
           }
         />
