@@ -4,22 +4,8 @@ const Share = (props) => {
   const handleCreatedCard = (event) => {
     event.preventDefault();
     props.handleCreatedCard();
-  };
-
-  return (
-    <fieldset>
-      <div className="share">
-        <legend className="share__title ">
-          <i className="fa-solid fa-share-nodes share-icon"></i>
-          <span className="fill__title--text ">Comparte</span>
-          <i className="share-arrow fa-solid fa-angle-up "></i>
-        </legend>
-        <div className="buttondiv">
-          <button onClick={handleCreatedCard} className="buttondiv-share ">
-            <i className="share-card fa-solid fa-address-card"></i> Crear
-            tarjeta
-          </button>
-        </div>
+    const renderShare = () => {
+      return (
         <div className="buttontwitter ">
           <h6 className="buttontwitter-h6 ">
             {props.resultCard.success === true
@@ -42,7 +28,33 @@ const Share = (props) => {
             <i className="fa-brands fa-twitter share-in-twitter"></i> Compartir
             en Twitter
           </a>
-        </div>
+        </div>)
+    }
+    renderShare();
+  };
+  const handleClickRender = () => {
+
+    return (
+      <div className="buttondiv" >
+        <button onClick={handleCreatedCard}
+          className="buttondiv-share ">
+          <i className="share-card fa-solid fa-address-card"></i> Crear
+          tarjeta
+        </button>
+      </div >)
+  }
+
+
+
+  return (
+    <fieldset>
+      <div className="share">
+        <legend className="share__title " onClick={handleClickRender}>
+          <i className="fa-solid fa-share-nodes share-icon"></i>
+          <span className="fill__title--text ">Comparte</span>
+          <i className="share-arrow fa-solid fa-angle-up "></i>
+        </legend>
+
       </div>
     </fieldset>
   );
