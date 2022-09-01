@@ -12,6 +12,7 @@ import Card from './Card';
 import Landing from './Landing';
 
 function App() {
+  const [isCollapsed, setIsCollapsed ] = useState ( true)
   const [resultCard, setResultCard] = useState({});
   const [dataCard, setDataCard] = useState(
     localStorage.get('userData', {
@@ -82,6 +83,8 @@ function App() {
               handleReset={handleReset}
               avatar={avatar}
               updateAvatar={updateAvatar}
+              isCollapsed = {isCollapsed}
+              setIsCollapsed = {setIsCollapsed }
             />
           }
         />

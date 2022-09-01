@@ -14,7 +14,8 @@ const Card = (props) => {
 
         <section className="form-section">
           <form className="form" action="#" method="POST">
-            <Design handleInput={props.handleInput} dataCard={props.dataCard} />
+            <Design handleInput={props.handleInput} dataCard={props.dataCard}    isCollapsed = {props.isCollapsed}
+              setIsCollapsed = {props.setIsCollapsed }   />
             <Fill
               handleInput={props.handleInput}
               dataCard={props.dataCard}
