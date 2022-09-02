@@ -2,7 +2,7 @@ import { useState } from 'react';
 import '../styles/Share.scss';
 
 const Share = (props) => {
-
+  let arrow = props.isCollapsed === 3 ? ('arrow-translate') : ('');
   const [showResult, setShowResult] = useState(false)
 
   const handleCreatedCard = (event) => {
@@ -38,9 +38,9 @@ const Share = (props) => {
     <fieldset>
       <div className="share">
         <legend className="share__title " onClick={handleClickRender}>
-          <i className="fa-solid fa-share-nodes share-icon"></i>
+          <i className="fa-solid fa-share-nodes share-icon "></i>
           <span className="fill__title--text ">Comparte</span>
-          <i className="share-arrow fa-solid fa-angle-up "></i>
+          <i className={`share-arrow fa-solid fa-angle-up ${arrow}`} ></i>
         </legend>
 
       </div>

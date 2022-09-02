@@ -19,6 +19,8 @@ const Card = (props) => {
               dataCard={props.dataCard}
               isCollapsed={props.isCollapsed}
               setIsCollapsed={props.setIsCollapsed}
+
+
             />
 
             <Fill
@@ -28,12 +30,14 @@ const Card = (props) => {
               updateAvatar={props.updateAvatar}
               isCollapsed={props.isCollapsed}
               setIsCollapsed={props.setIsCollapsed}
+
             />
             <Share
               handleCreatedCard={props.handleCreatedCard}
               resultCard={props.resultCard}
               isCollapsed={props.isCollapsed}
               setIsCollapsed={props.setIsCollapsed}
+
             />
           </form>
         </section>

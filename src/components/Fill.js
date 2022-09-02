@@ -7,7 +7,7 @@ const Fill = (props) => {
     const inputName = event.target.name;
     props.handleInput({ value: inputValue, name: inputName });
   };
-
+  let arrow = props.isCollapsed === 2 ? ('arrow-translate') : ('');
   const handleClickRender = () => {
 
     props.setIsCollapsed(props.isCollapsed === 2 ? 0 : 2)
@@ -101,7 +101,7 @@ const Fill = (props) => {
         <legend className="fill__title ">
           <i className="keyboard fa-solid fa-keyboard"></i>
           <span className="fill__title--text ">Rellena</span>
-          <i className="fa-solid fa-angle-up "></i>
+          <i className={`fa-solid fa-angle-up ${arrow}`} ></i>
         </legend>
       </section>
       {htmlCollapse()}

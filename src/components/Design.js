@@ -5,14 +5,14 @@ const Design = (props) => {
     const inputName = event.target.name;
     props.handleInput({ value: inputValue, name: inputName });
   };
-
+  let arrow = props.isCollapsed === 1 ? ('arrow-translate') : ('');
   const handleClickRender = () => {
 
 
     props.setIsCollapsed(props.isCollapsed === 1 ? 0 : 1)
 
 
-  };
+  }
 
 
   const htmlCollapse = () => {
@@ -84,7 +84,7 @@ const Design = (props) => {
         <legend className="fill__title ">
           <i className="fa-solid fa-object-ungroup design-icon"></i>
           <span className="fill__title--text ">Diseña</span>
-          <i className="fa-solid fa-angle-up "></i>
+          <i className={`fa-solid fa-angle-up ${arrow} `}></i>
         </legend>
       </section>
       {htmlCollapse()}
